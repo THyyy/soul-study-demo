@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.yuancome</groupId>
+        <artifactId>soul-study-demo</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>soul-spring-boot-demo</artifactId>
+    <name>soul-spring-boot-demo</name>
+    <description>Spring Boot Demo project for Soul Gateway</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring.boot.version>2.4.1</spring.boot.version>
+        <soul.version>2.2.1</soul.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 引入 Soul 针对 SpringMVC 的集成的依赖 -->
+        <dependency>
+            <groupId>org.dromara</groupId>
+            <artifactId>soul-client-springmvc</artifactId>
+            <version>${soul.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
