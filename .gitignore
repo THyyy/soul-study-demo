@@ -28,4 +28,6 @@ gen
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-/soul-spring-boot-demo/src/test/
+soul-dubbo-demo/soul-dubbo-service/target
+soul-dubbo-demo/soul-dubbo-api/target
+soul-spring-boot-demo/target

@@ -1,0 +1,33 @@
+dubbo:
+  # Dubbo 应用配置
+  application:
+    # 应用名
+    name: soul-dubbo-service
+  # Dubbo 注册中心配
+  registry:
+    # 注册中心地址。多个注册中心，可见 http://dubbo.apache.org/zh-cn/docs/user/references/registry/introduction.html 文档。
+    address: zookeeper://127.0.0.1:2181
+  # Dubbo 服务提供者协议配置
+  protocol:
+    # 协议端口。使用 -1 表示随机端口。
+    port: -1
+    # 使用 `dubbo://` 协议。更多协议，可见 http://dubbo.apache.org/zh-cn/docs/user/references/protocol/introduction.html 文档
+    name: dubbo
+  # Dubbo 服务提供者配置
+  provider:
+    # 【重要】远程服务调用超时时间，单位：毫秒。默认为 1000 毫秒，胖友可以根据自己业务修改
+    timeout: 1000
+  # 配置扫描 Dubbo 自定义的 @Service 注解，暴露成 Dubbo 服务提供者
+  scan:
+    base-packages: com.yuancome.soul.dubbo.service.impl
+
+soul:
+  # Soul 针对 Dubbo 的配置项，对应 DubboConfig 配置类
+  dubbo:
+    # Soul Admin 地址
+    admin-url: http://127.0.0.1:9095
+    # 设置在 Soul 网关的路由前缀，例如说 /order、/product 等等。
+    # 后续，网关会根据该 context-path 来进行路由
+    context-path: /soul-dubbo-api
+    # 应用名。未配置情况下，默认使用 Dubbo 的应用名
+    app-name: soul-dubbo-service
