@@ -19,7 +19,7 @@ dubbo:
     timeout: 1000
   # 配置扫描 Dubbo 自定义的 @Service 注解，暴露成 Dubbo 服务提供者
   scan:
-    base-packages: com.yuancome.soul.dubbo.service.impl
+    base-packages: com.yuancome.soul.dubbo
 
 soul:
   # Soul 针对 Dubbo 的配置项，对应 DubboConfig 配置类
