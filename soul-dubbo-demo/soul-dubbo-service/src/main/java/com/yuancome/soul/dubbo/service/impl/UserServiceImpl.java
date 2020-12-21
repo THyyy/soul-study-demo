@@ -4,7 +4,6 @@ import com.yuancome.soul.dubbo.api.UserService;
 import com.yuancome.soul.dubbo.api.dto.UserDTO;
 import org.apache.dubbo.config.annotation.Service;
 import org.dromara.soul.client.common.annotation.SoulClient;
-import org.springframework.stereotype.Component;
 
 /**
  * 用户服务接口实现类
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Component;
  * @date 2020/12/20
  */
 @Service
-@Component
 public class UserServiceImpl implements UserService {
 
     @Override
