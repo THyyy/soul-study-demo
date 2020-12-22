@@ -12,6 +12,7 @@
     <modules>
         <module>soul-spring-boot-demo</module>
         <module>soul-dubbo-demo</module>
+        <module>soul-spring-cloud-demo</module>
     </modules>
 
     <build>
